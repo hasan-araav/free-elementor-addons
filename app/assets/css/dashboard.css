@@ -1,0 +1,104 @@
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+.content {
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+}
+
+.tab-headers {
+    display: flex;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #f8fafb;
+  border-radius: 4px 4px 0 0;
+  color: #252525;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 19px 22px;
+  font-size: 17px;
+  margin-right: 5px;
+}
+
+.tablink.active {
+    background-color: white;
+    color: black;
+}
+
+.tablink:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  background: white;
+  display: none;
+  padding: 20px;
+  height: 100%;
+}
+
+.grid {
+    display: grid;
+}
+
+.widget-cards {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+}
+
+.fea-widget-card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    padding: 20px;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 100px;
+	height: 100px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #bada55;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 130px;
+}
