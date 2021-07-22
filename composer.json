@@ -1,0 +1,19 @@
+{
+    "name": "hasan/free-elementor-addons",
+    "description": "3000+ Free Elementor Widgets. All free for lifetime.",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Hasan",
+            "email": "aravvi@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "FreeElementorAddons\\": "app/"
+        },
+        "files": ["app/helpers/functions.php"]
+    }
+}
